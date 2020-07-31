@@ -20,11 +20,21 @@ $netIncome = ($incomeSegments[0][0] * $incomeSegments[0][1]) + ($incomeSegments[
 
 $annualIncome = $netIncome - $socialSecurity;
 
-echo "Bob's anual income (after taxes) is ".$annualIncome;
+echo "ANUAL income (after taxes) : ".$annualIncome;
 
 $annualIncome -=$annualExpenses["vacations"];
 $annualIncome -=$annualExpenses["carRepairs"];
 
-echo "\nBob's anual income (after taxes and annual expenses) is ".$annualIncome;
+echo "\nANUAL income (after taxes and annual expenses) : ".$annualIncome;
+
+$monthlyIncome = $annualIncome/12;
+
+echo "\nMONTHLY income (after taxes and annual expenses) : ".$monthlyIncome;
+
+$monthlyIncome -= $monthlyExpenses["rent"];
+$monthlyIncome -= $monthlyExpenses["utilities"];
+$monthlyIncome -= $monthlyExpenses["healthInsurance"];
+
+echo "\nMONTHLY income (after taxes, annual expenses and monthly expenses) : ".$monthlyIncome;
 
 
