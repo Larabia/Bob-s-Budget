@@ -8,6 +8,16 @@ $annualExpenses = [
 $monthlyExpenses = [
     "rent" => 1500,
     "utilities" => 200,
+<?php
+  
+$annualExpenses = [
+    "vacations" => 1000,
+    "carRepairs" => 1000,    
+];
+
+$monthlyExpenses = [
+    "rent" => 1500,
+    "utilities" => 200,
     "healthInsurance" => 200
 ];
 
@@ -52,6 +62,13 @@ $weeklyIncome -= $weeklyExpenses["food"];
 $weeklyIncome -= $weeklyExpenses["entertainment"];
 
 echo "\nWEEKLY income (after taxes and annual & monthly & weekly expenses) : \n".$weeklyIncome;
+
+echo "\nBob can save $".round($weeklyIncome*52)." per year!";
+
+
+
+
+
 
 
 
